@@ -37,7 +37,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className='jumbotron bg-primary text-white"'>
+        <div className='jumbotron bg-primary text-white mb-0'>
           <h1>Remember The Union!</h1>
           count={this.state.count}
           {/* <Counter /> */}
