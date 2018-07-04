@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+import LeaderCard from "./components/LeaderCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import leaders from "./leaders.json";
@@ -25,7 +25,7 @@ class App extends Component {
       <Wrapper>
         <Title>Remember The Union!</Title>
         {this.state.leaders.map(leader => (
-          <FriendCard
+          <LeaderCard
             removeFriend={this.removeFriend}
             id={leader.id}
             key={leader.id}
