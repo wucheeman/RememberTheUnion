@@ -9,7 +9,8 @@ import "./App.css";
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    leaders
+    leaders,
+    count: 0
   };
 
   // TODO: update or remove
@@ -20,18 +21,34 @@ class App extends Component {
     this.setState({ leaders });
   };
 
+    // handleIncrement increases this.state.count by 1
+    handleIncrement = () => {
+      // We always use the setState method to update a component's state
+      this.setState({ count: this.state.count + 1 });
+    };
+  
+    // handleDecrement decreases this.state.count by 1
+    handleDecrement = () => {
+      // We always use the setState method to update a component's state
+      this.setState({ count: this.state.count - this.state.count });
+    };
+
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <div>
-      <div className='jumbotron '>
-        <Counter />
+        <div className='jumbotron bg-primary text-white mb-0'>
+          <h1>Remember The Union!</h1>
+          count={this.state.count}
+          {/* <Counter /> */}
         </div>
       <Wrapper>
         {/* <Title>Remember The Union!</Title> */}
         {this.state.leaders.map(leader => (
           <LeaderCard
-            removeLeader={this.removeLeader}
+            // removeLeader={this.removeLeader}
+            handleIncrement={this.handleIncrement}
+            handleDecrement={this.handleDecrement}
             id={leader.id}
             key={leader.id}
             alt={leader.alt}
