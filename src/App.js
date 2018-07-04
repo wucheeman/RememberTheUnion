@@ -24,8 +24,8 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Remember The Union!</Title>
         <Counter />
+        <Title>Remember The Union!</Title>
         {this.state.leaders.map(leader => (
           <LeaderCard
             removeFriend={this.removeFriend}
