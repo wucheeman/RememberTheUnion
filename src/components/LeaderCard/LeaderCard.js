@@ -4,7 +4,7 @@ import "./LeaderCard.css";
 const FriendCard = props => (
   <div className="card">
     <div className="img-container">
-      <img alt={props.alt} src={props.src} />
+      <img alt={props.alt} src={props.src} onClick={props.handleIncrement} />
     </div>
     {/* <div className="content">
       <ul>
@@ -22,12 +22,12 @@ const FriendCard = props => (
     {/* <span onClick={() => props.removeFriend(props.id)} className="remove">
       𝘅
     </span> */}
-    <button className="btn btn-primary" onClick={props.handleIncrement}>
+    {/* <button className="btn btn-primary" onClick={props.handleIncrement}>
       Increment
-    </button>{" "}
-    <button className="btn btn-danger" onClick={props.handleDecrement}>
+    </button> */}
+    {/* <button className="btn btn-danger" onClick={props.handleDecrement}>
       Decrement
-    </button>
+    </button> */}
   </div>
 );
 
