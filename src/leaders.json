@@ -1,0 +1,98 @@
+[
+  {
+    "id": 0,
+    "alt": "William Sherman",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/William-Tecumseh-Sherman.jpg/189px-William-Tecumseh-Sherman.jpg",
+    "clicked": "false"
+  },
+  {
+    "id": 1,
+    "alt": "Ulysses Grant",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ulysses_Grant_3.jpg/167px-Ulysses_Grant_3.jpg",
+    "clicked": "false"
+  },
+  {
+    "id": 2,
+    "alt": "Phil Sheridan",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Philip_Sheridan.jpg",
+    "clicked": "false"
+  },
+  {
+    "id": 3,
+    "alt": "George Thomas",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/George_Henry_Thomas_-_Brady-Handy.jpg/179px-George_Henry_Thomas_-_Brady-Handy.jpg",
+    "clicked": "false"
+  },
+  {
+    "id": 4,
+    "alt": "Joshua Chamberlain",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Joshua_Chamberlain_-_Brady-Handy.jpg/213px-Joshua_Chamberlain_-_Brady-Handy.jpg",
+    "clicked": "false"
+  },
+  {
+    "id": 5,
+    "alt": "O O Howard",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Oliver_Otis_Howard.jpg/180px-Oliver_Otis_Howard.jpg",
+    "clicked": "false"
+  },
+  {
+    "id": 6,
+    "alt": "Winfield Hancock",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e0/WinfieldSHancock.png",
+    "clicked": "false"
+  },
+  {
+    "id": 7,
+    "alt": "George Meade",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/George_G._Meade_Standing.jpg/155px-George_G._Meade_Standing.jpg",
+    "clicked": "false"
+  },
+  {
+    "id": 8,
+    "alt": "David Farragut",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Admiral_Farragut2.jpg/162px-Admiral_Farragut2.jpg",
+    "clicked": "false"
+  },
+  {
+    "id": 9,
+    "alt": "David Porter",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/David_Dixon_Porter_-_Mathew_Brady%27s_National_Photographic_Art_Gallery.jpg/153px-David_Dixon_Porter_-_Mathew_Brady%27s_National_Photographic_Art_Gallery.jpg",
+    "clicked": "false"
+  },
+  {
+    "id": 10,
+    "alt": "James McPherson",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Brady-GeneralMcPherson.jpg/181px-Brady-GeneralMcPherson.jpg",
+    "clicked": "false"
+  },
+  {
+    "id": 11,
+    "alt": "John Schofield",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/John_Schofield.jpg/171px-John_Schofield.jpg",
+    "clicked": "false"
+  },
+  {
+    "id": 12,
+    "alt": "Henry Slocum",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Henry_Warner_Slocum.jpg/180px-Henry_Warner_Slocum.jpg",
+    "clicked": "false"
+  },
+  {
+    "id": 13,
+    "alt": "Abraham Lincoln",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/191px-Abraham_Lincoln_O-77_matte_collodion_print.jpg",
+    "clicked": "false"
+  },
+  {
+    "id": 14,
+    "alt": "Gideon Welles",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Gideon_Welles_cph.3b20114.jpg/192px-Gideon_Welles_cph.3b20114.jpg",
+    "clicked": "false"
+  },
+  {
+    "id": 15,
+    "alt": "Edwin Stanton",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Edwin_McMasters_Stanton_Secretary_of_War.jpg/182px-Edwin_McMasters_Stanton_Secretary_of_War.jpg",
+    "clicked": "false"
+  }
+]
