@@ -13,11 +13,11 @@ class App extends Component {
   };
 
   // TODO: update or remove
-  removeFriend = id => {
+  removeLeader = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
+    const leaders = this.state.leaders.filter(leader => leader.id !== id);
     // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
+    this.setState({ leaders });
   };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
@@ -31,7 +31,7 @@ class App extends Component {
         {/* <Title>Remember The Union!</Title> */}
         {this.state.leaders.map(leader => (
           <LeaderCard
-            removeFriend={this.removeFriend}
+            removeLeader={this.removeLeader}
             id={leader.id}
             key={leader.id}
             alt={leader.alt}
