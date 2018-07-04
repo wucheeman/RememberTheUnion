@@ -2,9 +2,9 @@ import React from "react";
 import "./LeaderCard.css";
 
 const FriendCard = props => (
-  <div className="card">
+  <div className="card"  onClick={props.handleIncrement}>
     <div className="img-container">
-      <img alt={props.alt} src={props.src} onClick={props.handleIncrement} />
+      <img alt={props.alt} src={props.src} />
     </div>
     {/* <div className="content">
       <ul>

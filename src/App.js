@@ -53,6 +53,7 @@ class App extends Component {
             key={leader.id}
             alt={leader.alt}
             src={leader.src}
+            clicked={false}
             // occupation={friend.occupation}
             // location={friend.location}
           />
