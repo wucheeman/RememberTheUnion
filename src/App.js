@@ -23,9 +23,12 @@ class App extends Component {
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
-      <Wrapper>
+      <div>
+      <div className='jumbotron '>
         <Counter />
-        <Title>Remember The Union!</Title>
+        </div>
+      <Wrapper>
+        {/* <Title>Remember The Union!</Title> */}
         {this.state.leaders.map(leader => (
           <LeaderCard
             removeFriend={this.removeFriend}
@@ -38,6 +41,7 @@ class App extends Component {
           />
         ))}
       </Wrapper>
+      </div>
     );
   }
 }
