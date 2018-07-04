@@ -17,7 +17,7 @@ class Counter extends React.Component {
   // handleDecrement decreases this.state.count by 1
   handleDecrement = () => {
     // We always use the setState method to update a component's state
-    this.setState({ count: this.state.count - 1 });
+    this.setState({ count: this.state.count - this.state.count });
   };
 
   // The render method returns the JSX that should be rendered
