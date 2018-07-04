@@ -19,9 +19,15 @@ const FriendCard = props => (
         </li>
       </ul>
     </div> */}
-    <span onClick={() => props.removeLeader(props.id)} className="remove">
+    {/* <span onClick={() => props.removeFriend(props.id)} className="remove">
       𝘅
-    </span>
+    </span> */}
+    <button className="btn btn-primary" onClick={props.handleIncrement}>
+      Increment
+    </button>{" "}
+    <button className="btn btn-danger" onClick={props.handleDecrement}>
+      Decrement
+    </button>
   </div>
 );
 
