@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import LeaderCard from "./components/LeaderCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Counter from './components/Counter';
 import leaders from "./leaders.json";
 import "./App.css";
 
@@ -24,6 +25,7 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Remember The Union!</Title>
+        <Counter />
         {this.state.leaders.map(leader => (
           <LeaderCard
             removeFriend={this.removeFriend}
