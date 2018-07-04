@@ -2,7 +2,9 @@ import React from "react";
 import "./LeaderCard.css";
 
 const FriendCard = props => (
-  <div className="card">
+  // <div className="card"  onClick={props.handleClick}>
+  // <div className="card"  onClick={() => props.handleClick(props.clicked)}>
+  <div className="card"  onClick={() => props.handleClick(props.id)}>
     <div className="img-container">
       <img alt={props.alt} src={props.src} />
     </div>
@@ -22,12 +24,12 @@ const FriendCard = props => (
     {/* <span onClick={() => props.removeFriend(props.id)} className="remove">
       𝘅
     </span> */}
-    <button className="btn btn-primary" onClick={props.handleIncrement}>
+    {/* <button className="btn btn-primary" onClick={props.handleIncrement}>
       Increment
-    </button>{" "}
-    <button className="btn btn-danger" onClick={props.handleDecrement}>
+    </button> */}
+    {/* <button className="btn btn-danger" onClick={props.handleDecrement}>
       Decrement
-    </button>
+    </button> */}
   </div>
 );
 

@@ -14,26 +14,24 @@ class App extends Component {
   };
 
   // TODO: update or remove
-  removeLeader = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const leaders = this.state.leaders.filter(leader => leader.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ leaders });
-  };
-
-    // handleIncrement increases this.state.count by 1
-    handleIncrement = () => {
-      // We always use the setState method to update a component's state
-      this.setState({ count: this.state.count + 1 });
-    };
-  
-    // handleDecrement decreases this.state.count by 1
-    handleDecrement = () => {
-      // We always use the setState method to update a component's state
-      this.setState({ count: this.state.count - this.state.count });
+  // removeLeader = id => {
+  //   // Filter this.state.friends for friends with an id not equal to the id being removed
+  //   const leaders = this.state.leaders.filter(leader => leader.id !== id);
+  //   // Set this.state.friends equal to the new friends array
+  //   this.setState({ leaders });
+  // };
+ 
+    handleClick = id => {
+      const leaders = this.state.leaders.filter(leader => leader.id === id);
+      if (!leaders[0].clicked) {
+        leaders[0].clicked = true;
+        this.setState({ count: this.state.count + 1 });
+      } else {
+        this.setState({ count: this.state.count - this.state.count });
+      }
     };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  // Map over this.state.leaders and render a LeaderCard component for each leader object
   render() {
     return (
       <div>
@@ -47,12 +45,13 @@ class App extends Component {
         {this.state.leaders.map(leader => (
           <LeaderCard
             // removeLeader={this.removeLeader}
-            handleIncrement={this.handleIncrement}
-            handleDecrement={this.handleDecrement}
+            handleClick={this.handleClick}
+            // handleDecrement={this.handleDecrement}
             id={leader.id}
             key={leader.id}
             alt={leader.alt}
             src={leader.src}
+            clicked={leader.clicked}
             // occupation={friend.occupation}
             // location={friend.location}
           />
