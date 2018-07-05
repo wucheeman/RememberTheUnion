@@ -12,7 +12,8 @@ class App extends Component {
   state = {
     leaders,
     count: 0,
-    clickOutcome: 'Click and Remember!'
+    clickOutcome: 'Click and Remember!',
+    bestCount: 0
   };
 
   shuffle = (leaderArray) => {
@@ -30,8 +31,13 @@ class App extends Component {
     const leaders = this.state.leaders.filter(leader => leader.id === id);
     if (!leaders[0].clicked) {
       leaders[0].clicked = true;
-      this.setState({ count: this.state.count + 1 });
+      const newCount = this.state.count + 1;
+      this.setState({ count: newCount });
       this.setState({clickOutcome: 'You Guessed Correctly!'})
+      // count not actually updated yet, so use newCount
+      if (newCount >= this.state.bestCount) {
+        this.setState({ bestCount: newCount });
+      }
     } else {
       this.setState({clickOutcome: 'You Guessed Incorrectly!'})
       // game over, so reset count and clicked
@@ -57,7 +63,7 @@ class App extends Component {
           <ul>
               <li id='gameName'>Hurrah for the Union!</li>
               <li id='guessOutcome'>{this.state.clickOutcome}</li>
-              <li id='gameCount'>Count: {this.state.count} | Your Best: 42</li>
+              <li id='gameCount'>Count: {this.state.count} | Your Best Count: {this.state.bestCount}</li>
           </ul>
         </div>
         {/* <div class='container'> */}
