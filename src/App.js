@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import LeaderCard from "./components/LeaderCard";
 import Wrapper from "./components/Wrapper";
+import Navbar from "./components/Navbar";
 // TODO - delete
 // import Title from "./components/Title";
 // import Counter from './components/Counter';
@@ -63,14 +64,18 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className='navbar bg-primary text-white fixed-top'>
+        {/* <div className='navbar bg-primary text-white fixed-top'>
           <ul>
               <li id='gameName'>Hurrah for the Union!</li>
               <li id='guessOutcome'>{this.state.clickOutcome}</li>
               <li id='gameCount'>Count: {this.state.count} | Your Best Count: {this.state.bestCount}</li>
           </ul>
-        </div>
-        {/* <div class='container'> */}
+        </div> */}
+        <Navbar 
+          clickOutcome={this.state.clickOutcome}
+          count={this.state.count}
+          bestCount={this.state.bestCount}
+        />
           <div className='row instructions text-white'>
             <div className='col-sm-3 text-center pt-4 font-weight-bold border-right'>
               <h4>Instructions</h4>
@@ -82,7 +87,7 @@ class App extends Component {
               <h6>Good luck!</h6>
             </div>
           </div>
-        {/* </div> */}
+
       <Wrapper>
         {this.state.leaders.map(leader => (
           <LeaderCard

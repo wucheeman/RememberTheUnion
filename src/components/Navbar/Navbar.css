@@ -1,43 +1,27 @@
-/* TODO: delete if not used */
-/* .title {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 50px;
-} */
-
-/* .navbar {
-  min-height: 70px;
-  position: fixed;
-  width: 100%;
-  font-size: calc(10px + 14 * (100vw - 320px)/ 800);
-  z-index: 99;
-  white-space: nowrap;
-} */
-
-/* .navbar {
+.navbar {
   min-height: 100px;
-} */
+}
 
 /* TODO: is this needed now? */
-/* .navbar-brand { */
+.navbar-brand {
   /* padding: 0 15px; */
-  /* height: 100px; */
+  height: 100px;
   /* line-height: 80px; */
-/* } */
+}
 
-/* ul {
+ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   width: 100%;
-} */
+}
 
-/* li {
-  float: left; */
+li {
+  float: left;
   /* vertical-align: bottom; */
-/* } */
+}
 
-/* #gameName {
+#gameName {
   font-size: 24pt;
   font-weight: 600;
 }
@@ -56,9 +40,4 @@
   font-size: 16pt;
   font-weight: 400;
   padding-top: 0.9%;
-} */
-
-.instructions {
-  background:#6CADDC;
 }
-
