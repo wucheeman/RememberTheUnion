@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import LeaderCard from "./components/LeaderCard";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
-import Counter from './components/Counter';
+// TODO - delete
+// import Title from "./components/Title";
+// import Counter from './components/Counter';
 import leaders from "./leaders.json";
 import "./App.css";
 
@@ -10,7 +11,9 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     leaders,
-    count: 0
+    count: 0,
+    clickOutcome: 'Click and Remember!',
+    bestCount: 0
   };
 
   shuffle = (leaderArray) => {
@@ -28,9 +31,23 @@ class App extends Component {
     const leaders = this.state.leaders.filter(leader => leader.id === id);
     if (!leaders[0].clicked) {
       leaders[0].clicked = true;
-      this.setState({ count: this.state.count + 1 });
+      const newCount = this.state.count + 1;
+      this.setState({ count: newCount });
+      this.setState({clickOutcome: 'You Guessed Correctly!'})
+      // count not actually updated yet, so use newCount
+      if (newCount >= this.state.bestCount) {
+        this.setState({ bestCount: newCount });
+      }
     } else {
-      this.setState({ count: this.state.count - this.state.count });
+      this.setState({clickOutcome: 'You Guessed Incorrectly!'})
+      // game over, so reset count and clicked
+      this.setState({ count: 0 });
+      // make copy so not mutating state directly
+      const resetArray = this.state.leaders.slice();
+      resetArray.forEach((leader) => {
+        leader.clicked = false;
+      });
+      this.setState({leaders: resetArray});
     }
     // pass a copy so don't mutate state directly
     const leaderArray = this.shuffle(this.state.leaders.slice());
@@ -42,13 +59,26 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className='jumbotron bg-primary text-white mb-0'>
-          <h1>Remember The Union!</h1>
-          count={this.state.count}
-          {/* <Counter /> */}
+        <div className='navbar bg-primary text-white fixed-top'>
+          <ul>
+              <li id='gameName'>Hurrah for the Union!</li>
+              <li id='guessOutcome'>{this.state.clickOutcome}</li>
+              <li id='gameCount'>Count: {this.state.count} | Your Best Count: {this.state.bestCount}</li>
+          </ul>
         </div>
+        {/* <div class='container'> */}
+          <div className='row instructions bg-info'>
+            <div className='col-sm-3'>
+              <h4>Instructions</h4>
+            </div>
+            <div className='col-sm-9'>
+              <h6>Hurrah for the Union is a game of clicks and memory. You get one point per square clicked -- but only the first time!</h6>
+              <h6>If you click the same square again, you lose and have to start over. Good luck!</h6>
+              
+            </div>
+          </div>
+        {/* </div> */}
       <Wrapper>
-        {/* <Title>Remember The Union!</Title> */}
         {this.state.leaders.map(leader => (
           <LeaderCard
             // removeLeader={this.removeLeader}
