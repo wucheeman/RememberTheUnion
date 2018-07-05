@@ -89,6 +89,7 @@ class App extends Component {
             alt={leader.alt}
             src={leader.src}
             clicked={leader.clicked}
+            link={leader.link}
             // occupation={friend.occupation}
             // location={friend.location}
           />
