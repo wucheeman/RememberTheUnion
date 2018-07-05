@@ -35,7 +35,7 @@ class App extends Component {
       let displayMsg = 'You Guessed Correctly!';
       this.setState({ count: newCount });
       if (newCount == this.state.leaders.length) {
-        displayMsg = "CONGRATS! YOU'VE WON!"
+        displayMsg = "WOW! YOU'VE WON!"
       }
       this.setState({clickOutcome: displayMsg})
       // count not actually updated yet, so use newCount
