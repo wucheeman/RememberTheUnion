@@ -32,8 +32,12 @@ class App extends Component {
     if (!leaders[0].clicked) {
       leaders[0].clicked = true;
       const newCount = this.state.count + 1;
+      let displayMsg = 'You Guessed Correctly!';
       this.setState({ count: newCount });
-      this.setState({clickOutcome: 'You Guessed Correctly!'})
+      if (newCount == this.state.leaders.length) {
+        displayMsg = "CONGRATS! YOU'VE WON!"
+      }
+      this.setState({clickOutcome: displayMsg})
       // count not actually updated yet, so use newCount
       if (newCount >= this.state.bestCount) {
         this.setState({ bestCount: newCount });
