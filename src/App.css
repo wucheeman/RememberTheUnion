@@ -16,7 +16,6 @@
 
 .navbar {
   min-height: 100px;
-  /* position: sticky; */
 }
 
 .navbar-brand {
@@ -40,7 +39,6 @@ li {
 #gameName {
   font-size: 24pt;
   font-weight: 600;
-
 }
 
 #guessOutcome {
@@ -58,3 +56,8 @@ li {
   font-weight: 400;
   padding-top: 0.9%;
 }
+
+.instructions {
+  background:#6CADDC;
+}
+
