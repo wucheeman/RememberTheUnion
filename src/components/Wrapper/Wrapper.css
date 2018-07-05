@@ -1,6 +1,6 @@
 .wrapper {
   padding-top: 50px;
-  background: #ECEFF1;
+  background: #6CADDC;
   height: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -8,8 +8,12 @@
   justify-content: space-around;
   align-content: flex-start;
   overflow: auto;
-    padding-left: 100px;
-    padding-right: 100px;
-    margin-left: 100px;
-    margin-right: 100px
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-image:url(https://www.westpoint.edu/history/SiteAssets/SitePages/American%20Civil%20War/ACW01.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
