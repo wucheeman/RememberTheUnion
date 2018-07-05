@@ -30,7 +30,14 @@ class App extends Component {
       leaders[0].clicked = true;
       this.setState({ count: this.state.count + 1 });
     } else {
-      this.setState({ count: this.state.count - this.state.count });
+      // game over, so reset count and clicked
+      this.setState({ count: 0 });
+      // make copy so not mutating state directly
+      const resetArray = this.state.leaders.slice();
+      resetArray.forEach((leader) => {
+        leader.clicked = false;
+      });
+      this.setState({leaders: resetArray});
     }
     // pass a copy so don't mutate state directly
     const leaderArray = this.shuffle(this.state.leaders.slice());
