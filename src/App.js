@@ -57,13 +57,19 @@ class App extends Component {
               <li id='gameCount'>Count: {this.state.count} | Your Best: 42</li>
           </ul>
         </div>
-        {/* <div className='jumbotron bg-primary text-white mb-0'>
-          <h1>Remember The Union!</h1>
-          count={this.state.count}
-          <Counter />
-        </div> */}
+        {/* <div class='container'> */}
+          <div className='row instructions bg-info'>
+            <div className='col-sm-3'>
+              <h4>Instructions</h4>
+            </div>
+            <div className='col-sm-9'>
+              <h6>Hurrah for the Union is a game of clicks and memory. You get one point per square clicked -- but only the first time!</h6>
+              <h6>If you click the same square again, you lose and have to start over. Good luck!</h6>
+              
+            </div>
+          </div>
+        {/* </div> */}
       <Wrapper>
-        {/* <Title>Remember The Union!</Title> */}
         {this.state.leaders.map(leader => (
           <LeaderCard
             // removeLeader={this.removeLeader}
