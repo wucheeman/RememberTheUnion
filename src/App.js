@@ -82,7 +82,7 @@ class App extends Component {
             </div>
             <div class='col-sm-1'></div>
             <div className='col-sm-8'>
-              <h6>Hurrah for the Union is a game of clicks and memory. You get one point per square clicked -- but only the first time!</h6>
+              <h6>Hurrah for the Union is a game of clicks and memory. Win by getting 15 points, earn one point per square when it's clicked once.</h6>
               <h6>If you click the same square again, you have to start over. To learn more these people, click their names.</h6>
               <h6>Good luck!</h6>
             </div>
