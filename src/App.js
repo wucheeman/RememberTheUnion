@@ -11,7 +11,8 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     leaders,
-    count: 0
+    count: 0,
+    clickOutcome: 'Click and Remember!'
   };
 
   shuffle = (leaderArray) => {
@@ -30,7 +31,9 @@ class App extends Component {
     if (!leaders[0].clicked) {
       leaders[0].clicked = true;
       this.setState({ count: this.state.count + 1 });
+      this.setState({clickOutcome: 'You Guessed Correctly!'})
     } else {
+      this.setState({clickOutcome: 'You Guessed Incorrectly!'})
       // game over, so reset count and clicked
       this.setState({ count: 0 });
       // make copy so not mutating state directly
@@ -53,7 +56,7 @@ class App extends Component {
         <div className='navbar bg-primary text-white'>
           <ul>
               <li id='gameName'>Hurrah for the Union!</li>
-              <li id='guessOutcome'>Click and Remember!</li>
+              <li id='guessOutcome'>{this.state.clickOutcome}</li>
               <li id='gameCount'>Count: {this.state.count} | Your Best: 42</li>
           </ul>
         </div>
