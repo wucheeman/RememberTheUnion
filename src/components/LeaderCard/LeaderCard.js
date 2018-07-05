@@ -11,7 +11,9 @@ const FriendCard = props => (
     <div className="content">
       {/* <ul>
         <li> */}
+        <a href={props.link} alt={props.alt} target="_blank">
           {props.alt}
+        </a>
         {/* </li>
        </ul> */}
     </div>
