@@ -16,7 +16,7 @@
 
 .navbar {
   min-height: 100px;
-  position: sticky;
+  /* position: sticky; */
 }
 
 .navbar-brand {

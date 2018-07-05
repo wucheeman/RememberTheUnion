@@ -53,7 +53,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className='navbar bg-primary text-white'>
+        <div className='navbar bg-primary text-white fixed-top'>
           <ul>
               <li id='gameName'>Hurrah for the Union!</li>
               <li id='guessOutcome'>{this.state.clickOutcome}</li>
