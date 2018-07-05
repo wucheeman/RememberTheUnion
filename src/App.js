@@ -32,8 +32,12 @@ class App extends Component {
     if (!leaders[0].clicked) {
       leaders[0].clicked = true;
       const newCount = this.state.count + 1;
+      let displayMsg = 'You Guessed Correctly!';
       this.setState({ count: newCount });
-      this.setState({clickOutcome: 'You Guessed Correctly!'})
+      if (newCount == this.state.leaders.length) {
+        displayMsg = "WOW! YOU'VE WON!"
+      }
+      this.setState({clickOutcome: displayMsg})
       // count not actually updated yet, so use newCount
       if (newCount >= this.state.bestCount) {
         this.setState({ bestCount: newCount });
@@ -67,14 +71,15 @@ class App extends Component {
           </ul>
         </div>
         {/* <div class='container'> */}
-          <div className='row instructions bg-info'>
-            <div className='col-sm-3'>
+          <div className='row instructions text-white'>
+            <div className='col-sm-3 text-center pt-4 font-weight-bold border-right'>
               <h4>Instructions</h4>
             </div>
-            <div className='col-sm-9'>
+            <div class='col-sm-1'></div>
+            <div className='col-sm-8'>
               <h6>Hurrah for the Union is a game of clicks and memory. You get one point per square clicked -- but only the first time!</h6>
-              <h6>If you click the same square again, you lose and have to start over. Good luck!</h6>
-              
+              <h6>If you click the same square again, you have to start over. To learn more these people, click their names.</h6>
+              <h6>Good luck!</h6>
             </div>
           </div>
         {/* </div> */}
