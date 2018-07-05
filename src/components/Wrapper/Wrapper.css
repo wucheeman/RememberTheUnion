@@ -8,4 +8,8 @@
   justify-content: space-around;
   align-content: flex-start;
   overflow: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: 100px;
+    margin-right: 100px
 }
