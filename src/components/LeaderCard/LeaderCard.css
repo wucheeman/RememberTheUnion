@@ -28,7 +28,9 @@
   font-size: 15px;
 }
 
-
+a {
+  color: white;
+}
 
 /*
 .card > .content > ul {
