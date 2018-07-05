@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import LeaderCard from "./components/LeaderCard";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
-import Counter from './components/Counter';
+// TODO - delete
+// import Title from "./components/Title";
+// import Counter from './components/Counter';
 import leaders from "./leaders.json";
 import "./App.css";
 
@@ -49,11 +50,18 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className='jumbotron bg-primary text-white mb-0'>
+        <div className='navbar bg-primary text-white'>
+          <ul>
+              <li id='gameName'>Hurrah for the Union!</li>
+              <li id='guessOutcome'>Click and Remember!</li>
+              <li id='gameCount'>Count: {this.state.count} | Your Best: 42</li>
+          </ul>
+        </div>
+        {/* <div className='jumbotron bg-primary text-white mb-0'>
           <h1>Remember The Union!</h1>
           count={this.state.count}
-          {/* <Counter /> */}
-        </div>
+          <Counter />
+        </div> */}
       <Wrapper>
         {/* <Title>Remember The Union!</Title> */}
         {this.state.leaders.map(leader => (
