@@ -18,12 +18,10 @@
   width: 60%;
   padding-top: 12%;
 }
-
 .card > .content {
   text-align: center;
   font-size: 15px;
 }
-
 a {
   color: white;
 }
