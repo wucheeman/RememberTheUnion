@@ -1,31 +1,19 @@
 .navbar {
   min-height: 100px;
 }
-
-/* TODO: is this needed now? */
-.navbar-brand {
-  /* padding: 0 15px; */
-  height: 100px;
-  /* line-height: 80px; */
-}
-
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   width: 100%;
 }
-
 li {
   float: left;
-  /* vertical-align: bottom; */
 }
-
 #gameName {
   font-size: 24pt;
   font-weight: 600;
 }
-
 #guessOutcome {
   font-size: 16pt;
   font-weight: 400;
@@ -35,7 +23,6 @@ li {
   margin-right: 15%;
   padding-top: 0.9%;
 }
-
 #gameCount {
   font-size: 16pt;
   font-weight: 400;
