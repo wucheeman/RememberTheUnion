@@ -3,10 +3,6 @@ import LeaderCard from "./components/LeaderCard";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
 import HowTo from "./components/HowTo";
-
-// TODO - delete
-// import Title from "./components/Title";
-// import Counter from './components/Counter';
 import leaders from "./leaders.json";
 import "./App.css";
 
@@ -66,43 +62,22 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <div className='navbar bg-primary text-white fixed-top'>
-          <ul>
-              <li id='gameName'>Hurrah for the Union!</li>
-              <li id='guessOutcome'>{this.state.clickOutcome}</li>
-              <li id='gameCount'>Count: {this.state.count} | Your Best Count: {this.state.bestCount}</li>
-          </ul>
-        </div> */}
         <Navbar 
           clickOutcome={this.state.clickOutcome}
           count={this.state.count}
           bestCount={this.state.bestCount}
         />
-          {/* <div className='row instructions text-white'>
-            <div className='col-sm-3 text-center pt-4 font-weight-bold border-right'>
-              <h4>How to Play</h4>
-            </div>
-            <div className='col-sm-8 pl-4'>
-              <h6>Hurrah for the Union is a game of clicks and memory. Win by getting 15 points, earning one point each time a square is clicked once.</h6>
-              <h6>If you click the same square again, you have to start over. To learn more these people, click their names.</h6>
-              <h6>Good luck!</h6>
-            </div>
-          </div> */}
         <HowTo />
       <Wrapper>
         {this.state.leaders.map(leader => (
           <LeaderCard
-            // removeLeader={this.removeLeader}
             handleClick={this.handleClick}
-            // handleDecrement={this.handleDecrement}
             id={leader.id}
             key={leader.id}
             alt={leader.alt}
             src={leader.src}
             clicked={leader.clicked}
             link={leader.link}
-            // occupation={friend.occupation}
-            // location={friend.location}
           />
         ))}
       </Wrapper>
