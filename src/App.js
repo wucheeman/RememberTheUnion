@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import LeaderCard from "./components/LeaderCard";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
+import HowTo from "./components/HowTo";
+
 // TODO - delete
 // import Title from "./components/Title";
 // import Counter from './components/Counter';
@@ -35,7 +37,7 @@ class App extends Component {
       const newCount = this.state.count + 1;
       let displayMsg = 'You Guessed Correctly!';
       this.setState({ count: newCount });
-      if (newCount == this.state.leaders.length) {
+      if (newCount === this.state.leaders.length) {
         displayMsg = "WOW! YOU'VE WON!"
       }
       this.setState({clickOutcome: displayMsg})
@@ -76,18 +78,17 @@ class App extends Component {
           count={this.state.count}
           bestCount={this.state.bestCount}
         />
-          <div className='row instructions text-white'>
+          {/* <div className='row instructions text-white'>
             <div className='col-sm-3 text-center pt-4 font-weight-bold border-right'>
-              <h4>Instructions</h4>
+              <h4>How to Play</h4>
             </div>
-            <div class='col-sm-1'></div>
-            <div className='col-sm-8'>
-              <h6>Hurrah for the Union is a game of clicks and memory. Win by getting 15 points, earn one point per square when it's clicked once.</h6>
+            <div className='col-sm-8 pl-4'>
+              <h6>Hurrah for the Union is a game of clicks and memory. Win by getting 15 points, earning one point each time a square is clicked once.</h6>
               <h6>If you click the same square again, you have to start over. To learn more these people, click their names.</h6>
               <h6>Good luck!</h6>
             </div>
-          </div>
-
+          </div> */}
+        <HowTo />
       <Wrapper>
         {this.state.leaders.map(leader => (
           <LeaderCard
